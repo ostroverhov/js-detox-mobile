@@ -26,15 +26,16 @@ const ProfileStack = createStackNavigator();
 const Tab = createMaterialBottomTabNavigator();
 
 const MainTabScreen = () => (
-  <Tab.Navigator initialRouteName="Home" activeColor="#fff">
+  <Tab.Navigator initialRouteName="Home" activeColor="#fff" testID="Bottom tab menu">
     <Tab.Screen
+      testID="Home-bottom"
       name="Home"
       component={HomeStackScreen}
       options={{
         tabBarLabel: 'Home',
         tabBarColor: '#FF6347',
         tabBarIcon: ({color}) => (
-          <Icon name="ios-home" color={color} size={26} />
+          <Icon name="ios-home" color={color} size={26} testID="Home-bottom"/>
         ),
       }}
     />
@@ -45,7 +46,7 @@ const MainTabScreen = () => (
         tabBarLabel: 'Updates',
         tabBarColor: '#1f65ff',
         tabBarIcon: ({color}) => (
-          <Icon name="ios-notifications" color={color} size={26} />
+          <Icon name="ios-notifications" color={color} size={26} testID="Notifications-bottom"/>
         ),
       }}
     />
@@ -56,7 +57,7 @@ const MainTabScreen = () => (
         tabBarLabel: 'Profile',
         tabBarColor: '#694fad',
         tabBarIcon: ({color}) => (
-          <Icon name="ios-person" color={color} size={26} />
+          <Icon name="ios-person" color={color} size={26} testID="Profile-bottom"/>
         ),
       }}
     />
@@ -65,9 +66,10 @@ const MainTabScreen = () => (
       component={ExploreScreen}
       options={{
         tabBarLabel: 'Explore',
+        testID: 'Explore-bottom',
         tabBarColor: '#d02860',
         tabBarIcon: ({color}) => (
-          <Icon name="ios-aperture" color={color} size={26} />
+          <Icon name="ios-aperture" color={color} size={26} testID="Explore-bottom"/>
         ),
       }}
     />
@@ -99,6 +101,7 @@ const HomeStackScreen = ({navigation}) => {
           headerLeft: () => (
             <View style={{marginLeft: 10}}>
               <Icon.Button
+                testID="menu-button"
                 name="ios-menu"
                 size={25}
                 color={colors.text}
@@ -216,6 +219,7 @@ const ProfileStackScreen = ({navigation}) => {
           headerRight: () => (
             <View style={{marginRight: 10}}>
               <MaterialCommunityIcons.Button
+                testID='EditProfile'
                 name="account-edit"
                 size={25}
                 backgroundColor={colors.background}

@@ -134,6 +134,7 @@ const SignInScreen = ({navigation}) => {
                     size={20}
                 />
                 <TextInput 
+                    testID="Your Username"
                     placeholder="Your Username"
                     placeholderTextColor="#666666"
                     style={[styles.textInput, {
@@ -173,6 +174,7 @@ const SignInScreen = ({navigation}) => {
                     size={20}
                 />
                 <TextInput 
+                    testID="Your Password"
                     placeholder="Your Password"
                     placeholderTextColor="#666666"
                     secureTextEntry={data.secureTextEntry ? true : false}
