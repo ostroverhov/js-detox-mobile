@@ -1,11 +1,17 @@
 import startScreenSteps from '../test_framework/steps/startScreenSteps'
 import signInScreenSteps from '../test_framework/steps/signInScreenSteps'
-import mainScreenSteps from '../test_framework/steps/mainScreenSteps'
 import bottomMenuSteps from './../test_framework/steps/bottomMenuSteps'
 import profileScreenSteps from './../test_framework/steps/profileScreenSteps'
 import testData from './../test_framework/testData.json'
-const profileButton = 'Profile-bottom'
-const profileMenuItems = ['Your Favorites', 'Payment', 'Tell Your Friends', 'Support', 'Settings']
+const REGISTERED_USER = testData.registeredUser
+const PROFILE_BUTTON = 'Profile-bottom'
+const PROFILE_MENU_ITEMS = {
+  YourFavorites: 'Your Favorites',
+  Payment: 'Payment',
+  TellYourFriends: 'Tell Your Friends',
+  Support: 'Support',
+  Settings: 'Settings'
+}
 
 describe('Testing bottom menu', () => {
 
@@ -19,14 +25,14 @@ describe('Testing bottom menu', () => {
 
   it('should present all bottom menu items', async () => {
     await startScreenSteps.tapGetStarted()
-    await signInScreenSteps.typeLoginData(testData.registeredUser.userName, testData.registeredUser.password)
+    await signInScreenSteps.typeLoginData(REGISTERED_USER.userName, REGISTERED_USER.password)
     await signInScreenSteps.tapSignInButton()
-    await bottomMenuSteps.tapBottomMenuItem(profileButton)
-    await profileScreenSteps.isProfileScreenOpened()
-    for (const item of profileMenuItems) {
-      await profileScreenSteps.isPresentProfileMenuItem(item)
+    await bottomMenuSteps.tapBottomMenuItem(PROFILE_BUTTON)
+    await profileScreenSteps.checkProfileScreenVisibility()
+    for (const item in PROFILE_MENU_ITEMS) {
+      await profileScreenSteps.checkProfileMenuItemVisiility(PROFILE_MENU_ITEMS[item])
     }
     await profileScreenSteps.tapEditProfile()
-    await profileScreenSteps.isPresentEditProfileLabel()
+    await profileScreenSteps.checkEditProfileLabel()
   });
 });

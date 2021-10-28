@@ -7,4 +7,4 @@ function TextBox(name, by) {
 TextBox.prototype = Object.create(BaseElement.prototype);
 TextBox.prototype.constructor = TextBox;
 
-module.exports = TextBox;
+export default TextBox;

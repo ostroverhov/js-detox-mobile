@@ -1,13 +1,17 @@
 function info(text) {
-    console.log(`${new Date().toISOString()} - ${text}`);
+    console.log(generateLogString(text));
 }
 
 function warning(text) {
-    console.warn(`${new Date().toISOString()} - ${text}`);
+    console.warn(generateLogString(text));
 }
 
 function error(text) {
-    console.error(`${new Date().toISOString()} - ${text}`);
+    console.error(generateLogString(text));
 }
 
-module.exports = { info, warning, error };
+function generateLogString(text) {
+    return `${new Date().toISOString()} - ${text}`
+} 
+
+export default { info, warning, error };

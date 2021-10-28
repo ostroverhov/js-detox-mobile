@@ -7,4 +7,4 @@ function ExploreScreen() {
 ExploreScreen.prototype = Object.create(BaseScreen.prototype);
 ExploreScreen.prototype.constructor = ExploreScreen;
 
-module.exports = ExploreScreen;
+export default ExploreScreen;

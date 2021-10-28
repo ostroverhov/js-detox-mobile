@@ -1,4 +1,4 @@
-import logger from '../utils/logger'
+import logger from 'D:/Food-Finder-React-Native-App-master/Food-Finder-React-Native-App-master/test_framework/utils/logger'
 import BaseScreen from './baseScreen'
 import Button from '../elements/button'
 import TextBox from '../elements/textBox'
@@ -26,4 +26,4 @@ MainScreen.prototype.tapCardMenuButton = async function(menuItem) {
     await elements.cardMenuItemButton(menuItem).tapElement();
 }
 
-module.exports = MainScreen;
+export default MainScreen;

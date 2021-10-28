@@ -5,8 +5,8 @@ function BaseScreen(name, by) {
     this.by = by
 }
 
-BaseScreen.prototype.isScreenOpened = async function() {
-    logger.info(`Is ${this.name} opened`)
+BaseScreen.prototype.checkScreenVisibility = async function() {
+    logger.info(`Check screen ${this.name} is visible`)
     await expect(element(this.by)).toBeVisible()
 }
 

@@ -7,4 +7,4 @@ function Button(name, by) {
 Button.prototype = Object.create(BaseElement.prototype);
 Button.prototype.constructor = Button;
 
-module.exports = Button;
+export default Button;

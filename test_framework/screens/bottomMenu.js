@@ -18,9 +18,9 @@ BottomMenu.prototype.tapBottomMenuButton = async function(menuItem) {
     await elements.menuItemButton(menuItem).tapElement(0);
 }
 
-BottomMenu.prototype.isPresentBottomMenuButton = async function(menuItem) {
+BottomMenu.prototype.checkBottomMenuButtonVisibility = async function(menuItem) {
     logger.info(`Is present bottom menu item ${menuItem}`)
-    await elements.menuItemButton(menuItem).isElementVisible(0);
+    await elements.menuItemButton(menuItem).checkElementVisiblility(0);
 }
 
-module.exports = BottomMenu;
+export default BottomMenu;

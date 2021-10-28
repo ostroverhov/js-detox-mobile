@@ -2,6 +2,8 @@ import startScreenSteps from '../test_framework/steps/startScreenSteps'
 import signInScreenSteps from '../test_framework/steps/signInScreenSteps'
 import mainScreenSteps from '../test_framework/steps/mainScreenSteps'
 import testData from './../test_framework/testData.json'
+const REGISTERED_USER = testData.registeredUser
+const UNREGISTERED_USER = testData.unregisteredUser
 
 describe('Testing login', () => {
 
@@ -14,21 +16,21 @@ describe('Testing login', () => {
   });
 
   it('should present start screen', async () => {
-    await startScreenSteps.isStartScreenOpened()
+    await startScreenSteps.checkStartScreenVisibility()
   });
 
   it('should show alert after login with wrong password', async () => {
     await startScreenSteps.tapGetStarted()
-    await signInScreenSteps.isSignInScreenOpened()
-    await signInScreenSteps.typeLoginData(testData.unregisteredUser.userName, testData.unregisteredUser.password)
+    await signInScreenSteps.checkSignInScreenVisibility()
+    await signInScreenSteps.typeLoginData(UNREGISTERED_USER.userName, UNREGISTERED_USER.password)
     await signInScreenSteps.tapSignInButton()
-    await signInScreenSteps.isInvalidUserAlertVisible()
+    await signInScreenSteps.checkInvalidUserAlertVisibility()
   });
 
   it('should show main screen after login', async () => {
     await startScreenSteps.tapGetStarted()
-    await signInScreenSteps.typeLoginData(testData.registeredUser.userName, testData.registeredUser.password)
+    await signInScreenSteps.typeLoginData(REGISTERED_USER.userName, REGISTERED_USER.password)
     await signInScreenSteps.tapSignInButton()
-    await mainScreenSteps.isMainScreenOpened()
+    await mainScreenSteps.checkMainScreenVisibility()
   });
 });

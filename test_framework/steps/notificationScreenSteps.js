@@ -2,8 +2,8 @@ import NotificationScreen from './../screens/notificationScreen'
 
 const notificationScreen = new NotificationScreen()
 
-async function isNotificationScreenOpened() {
-    await notificationScreen.isScreenOpened();
+async function checkNotificationScreenVisibility() {
+    await notificationScreen.checkScreenVisibility();
 }
 
-module.exports = { isNotificationScreenOpened };
+export default { checkNotificationScreenVisibility };

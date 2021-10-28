@@ -18,7 +18,7 @@ ProfileScreen.prototype.constructor = ProfileScreen;
 
 ProfileScreen.prototype.isPresentProfileMenuButton = async function(menuItem) {
     logger.info(`Is present profile menu item ${menuItem}`)
-    await elements.profileMenuButton(menuItem).isElementExist();
+    await elements.profileMenuButton(menuItem).checkElementExistence();
 }
 
 ProfileScreen.prototype.tapEditProfileButton = async function() {
@@ -26,9 +26,9 @@ ProfileScreen.prototype.tapEditProfileButton = async function() {
     await elements.editProfileButton.tapElement();
 }
 
-ProfileScreen.prototype.isPresentEditProfileLabel = async function() {
+ProfileScreen.prototype.checkEditProfileLabel = async function() {
     logger.info(`Is present edit profile label`)
-    await elements.editProfileLabel.isElementExist();
+    await elements.editProfileLabel.checkElementExistence();
 }
 
-module.exports = ProfileScreen;
+export default ProfileScreen;

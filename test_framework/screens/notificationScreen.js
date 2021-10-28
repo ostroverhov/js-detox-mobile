@@ -7,4 +7,4 @@ function NotificationScreen() {
 NotificationScreen.prototype = Object.create(BaseScreen.prototype);
 NotificationScreen.prototype.constructor = NotificationScreen;
 
-module.exports = NotificationScreen;
+export default NotificationScreen;

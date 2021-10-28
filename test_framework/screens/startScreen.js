@@ -1,4 +1,4 @@
-import logger from '../utils/logger'
+import logger from 'D:/Food-Finder-React-Native-App-master/Food-Finder-React-Native-App-master/test_framework/utils/logger'
 import BaseScreen from './baseScreen'
 import Button from '../elements/button'
 
@@ -18,4 +18,4 @@ StartScreen.prototype.tapGetStartedButton = async function() {
     await elements.getStartedButton.tapElement();
 }
 
-module.exports = StartScreen;
+export default StartScreen;

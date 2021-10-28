@@ -2,8 +2,8 @@ import SignInScreen from './../screens/signInScreen'
 
 const signInScreen = new SignInScreen()
 
-async function isSignInScreenOpened() {
-    await signInScreen.isScreenOpened();
+async function checkSignInScreenVisibility() {
+    await signInScreen.checkScreenVisibility();
 }
 
 async function typeLoginData(username, password) {
@@ -15,8 +15,8 @@ async function tapSignInButton() {
     await signInScreen.tapSignInButton();
 }
 
-async function isInvalidUserAlertVisible() {
-    await signInScreen.isAlertVisible();
+async function checkInvalidUserAlertVisibility() {
+    await signInScreen.checkAlertVisibility();
 }
 
-module.exports = { isSignInScreenOpened, typeLoginData, tapSignInButton, isInvalidUserAlertVisible };
+export default { checkSignInScreenVisibility, typeLoginData, tapSignInButton, checkInvalidUserAlertVisibility };

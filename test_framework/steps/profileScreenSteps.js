@@ -2,11 +2,11 @@ import ProfileScreen from './../screens/profileScreen'
 
 const profileScreen = new ProfileScreen()
 
-async function isProfileScreenOpened() {
-    await profileScreen.isScreenOpened();
+async function checkProfileScreenVisibility() {
+    await profileScreen.checkScreenVisibility();
 }
 
-async function isPresentProfileMenuItem(menuItem) {
+async function checkProfileMenuItemVisiility(menuItem) {
     await profileScreen.isPresentProfileMenuButton(menuItem);
 }
 
@@ -14,8 +14,8 @@ async function tapEditProfile() {
     await profileScreen.tapEditProfileButton();
 }
 
-async function isPresentEditProfileLabel() {
-    await profileScreen.isPresentEditProfileLabel();
+async function checkEditProfileLabel() {
+    await profileScreen.checkEditProfileLabel();
 }
 
-module.exports = { isProfileScreenOpened, isPresentProfileMenuItem, tapEditProfile, isPresentEditProfileLabel };
+export default { checkProfileScreenVisibility, checkProfileMenuItemVisiility, tapEditProfile, checkEditProfileLabel };

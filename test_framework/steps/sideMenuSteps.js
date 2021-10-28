@@ -2,16 +2,16 @@ import SideMenu from './../screens/sideMenu'
 
 const sideMenu = new SideMenu()
 
-async function isSideMenuOpened() {
-    await sideMenu.isScreenOpened();
+async function checkSideMenuVisibility() {
+    await sideMenu.checkScreenVisibility();
 }
 
-async function TapSignOut() {
+async function tapSignOut() {
     await sideMenu.tapSignOutButton();
 }
 
-async function isPresentMenuItem(menuItem) {
-    await sideMenu.isPresentMenuButton(menuItem);
+async function checkMenuItemVisibility(menuItem) {
+    await sideMenu.checkMenuButtonVisibility(menuItem);
 }
 
-module.exports = { isSideMenuOpened, TapSignOut, isPresentMenuItem };
+export default { checkSideMenuVisibility, tapSignOut, checkMenuItemVisibility };

@@ -33,9 +33,9 @@ SignInScreen.prototype.tapSignInButton = async function() {
     await elements.signInButton.tapElement();
 }
 
-SignInScreen.prototype.isAlertVisible = async function() {
+SignInScreen.prototype.checkAlertVisibility = async function() {
     logger.info('Is invalid user alert visible')
-    await elements.alertLabel.isElementVisible()
+    await elements.alertLabel.checkElementVisiblility()
 }
 
-module.exports = SignInScreen;
+export default SignInScreen;

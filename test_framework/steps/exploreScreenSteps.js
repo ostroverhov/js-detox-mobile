@@ -2,8 +2,8 @@ import ExploreScreen from './../screens/exploreScreen'
 
 const exploreScreen = new ExploreScreen()
 
-async function isExploreScreenOpened() {
-    await exploreScreen.isScreenOpened();
+async function checkExploreScreenVisibility() {
+    await exploreScreen.checkScreenVisibility();
 }
 
-module.exports = { isExploreScreenOpened };
+export default { checkExploreScreenVisibility };

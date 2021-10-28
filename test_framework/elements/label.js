@@ -7,4 +7,4 @@ function Label(name, by) {
 Label.prototype = Object.create(BaseElement.prototype);
 Label.prototype.constructor = Label;
 
-module.exports = Label;
+export default Label;

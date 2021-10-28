@@ -19,9 +19,9 @@ SideMenu.prototype.tapSignOutButton = async function() {
     await elements.signOutButton.tapElement();
 }
 
-SideMenu.prototype.isPresentMenuButton = async function(menuItem) {
+SideMenu.prototype.checkMenuButtonVisibility = async function(menuItem) {
     logger.info(`Is present menu item ${menuItem}`)
-    await elements.menuItemButton(menuItem).isElementVisible();
+    await elements.menuItemButton(menuItem).checkElementVisiblility();
 }
 
-module.exports = SideMenu;
+export default SideMenu;

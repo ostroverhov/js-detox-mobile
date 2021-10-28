@@ -2,12 +2,12 @@ import StartScreen from './../screens/startScreen'
 
 const startScreen = new StartScreen()
 
-async function isStartScreenOpened() {
-    await startScreen.isScreenOpened();
+async function checkStartScreenVisibility() {
+    await startScreen.checkScreenVisibility();
 }
 
 async function tapGetStarted() {
     await startScreen.tapGetStartedButton();
 }
 
-module.exports = { isStartScreenOpened, tapGetStarted };
+export default { checkStartScreenVisibility, tapGetStarted };
