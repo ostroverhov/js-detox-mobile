@@ -1,0 +1,10 @@
+{
+  "registeredUser":  {
+    "userName": "user1",
+    "password": "password"
+  },
+  "unregisteredUser": {
+    "userName": "user2",
+    "password": "password"
+  }
+}

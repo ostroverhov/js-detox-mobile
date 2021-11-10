@@ -127,7 +127,7 @@ const ExploreScreen = () => {
   const _scrollView = React.useRef(null);
 
   return (
-    <View style={styles.container}>
+    <View style={styles.container} testID='Explore screen'>
       <MapView
         ref={_map}
         initialRegion={state.region}
