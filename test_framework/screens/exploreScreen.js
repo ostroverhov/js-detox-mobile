@@ -1,10 +1,10 @@
-import BaseScreen from './baseScreen'
+import BaseScreen from '@/screens/baseScreen'
 
-function ExploreScreen() {
-    BaseScreen.call(this, 'Explore screen', by.id('Explore screen'))
+class ExploreScreen extends BaseScreen {
+
+    constructor() {
+        super('Explore screen', by.id('Explore screen'))
+    }
 }
-
-ExploreScreen.prototype = Object.create(BaseScreen.prototype);
-ExploreScreen.prototype.constructor = ExploreScreen;
 
 export default ExploreScreen;

@@ -1,4 +1,4 @@
-import ExploreScreen from './../screens/exploreScreen'
+import ExploreScreen from '@/screens/exploreScreen'
 
 const exploreScreen = new ExploreScreen()
 

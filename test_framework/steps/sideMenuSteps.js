@@ -1,4 +1,4 @@
-import SideMenu from './../screens/sideMenu'
+import SideMenu from '@/screens/sideMenu'
 
 const sideMenu = new SideMenu()
 

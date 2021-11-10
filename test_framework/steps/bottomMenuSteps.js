@@ -1,4 +1,4 @@
-import BottomMenu from './../screens/bottomMenu'
+import BottomMenu from '@/screens/bottomMenu'
 
 const bottomMenu = new BottomMenu()
 

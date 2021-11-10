@@ -1,13 +1,16 @@
-import logger from '../utils/logger'
+import logger from '@/utils/logger'
 
-function BaseScreen(name, by) {
-    this.name = name
-    this.by = by
-}
+class BaseScreen {
 
-BaseScreen.prototype.checkScreenVisibility = async function() {
-    logger.info(`Check screen ${this.name} is visible`)
-    await expect(element(this.by)).toBeVisible()
+    constructor(name, by) {
+        this.name = name
+        this.by = by
+    }
+    
+    async checkScreenVisibility() {
+        logger.info(`Check screen ${this.name} is visible`)
+        await expect(element(this.by)).toBeVisible()
+    }
 }
 
 module.exports = BaseScreen;

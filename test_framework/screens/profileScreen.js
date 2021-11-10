@@ -1,7 +1,7 @@
-import BaseScreen from './baseScreen'
-import logger from '../utils/logger'
-import Button from '../elements/button'
-import Label from '../elements/label'
+import BaseScreen from '@/screens/baseScreen'
+import logger from '@/utils/logger'
+import Button from '@/elements/button'
+import Label from '@/elements/label'
 
 const elements = {
     editProfileButton: new Button('Edit profile', by.id('EditProfile')),
@@ -9,26 +9,26 @@ const elements = {
     profileMenuButton: (menuItem) => new Button(`${menuItem}`, by.id(`${menuItem}`)),
 };
 
-function ProfileScreen() {
-    BaseScreen.call(this, 'Profile screen', by.id('Profile screen'))
-}
+class ProfileScreen extends BaseScreen {
 
-ProfileScreen.prototype = Object.create(BaseScreen.prototype);
-ProfileScreen.prototype.constructor = ProfileScreen;
+    constructor() {
+        super('Profile screen', by.id('Profile screen'))
+    }
 
-ProfileScreen.prototype.isPresentProfileMenuButton = async function(menuItem) {
-    logger.info(`Is present profile menu item ${menuItem}`)
-    await elements.profileMenuButton(menuItem).checkElementExistence();
-}
-
-ProfileScreen.prototype.tapEditProfileButton = async function() {
-    logger.info('Tap edit profile button')
-    await elements.editProfileButton.tapElement();
-}
-
-ProfileScreen.prototype.checkEditProfileLabel = async function() {
-    logger.info(`Is present edit profile label`)
-    await elements.editProfileLabel.checkElementExistence();
+    async isPresentProfileMenuButton(menuItem) {
+        logger.info(`Is present profile menu item ${menuItem}`)
+        await elements.profileMenuButton(menuItem).checkElementExistence();
+    }
+    
+    async tapEditProfileButton() {
+        logger.info('Tap edit profile button')
+        await elements.editProfileButton.tapElement();
+    }
+    
+    async checkEditProfileLabel() {
+        logger.info(`Is present edit profile label`)
+        await elements.editProfileLabel.checkElementExistence();
+    }
 }
 
 export default ProfileScreen;

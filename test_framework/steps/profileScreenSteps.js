@@ -1,4 +1,4 @@
-import ProfileScreen from './../screens/profileScreen'
+import ProfileScreen from '@/screens/profileScreen'
 
 const profileScreen = new ProfileScreen()
 

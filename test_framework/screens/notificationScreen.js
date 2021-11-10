@@ -1,10 +1,10 @@
-import BaseScreen from './baseScreen'
+import BaseScreen from '@/screens/baseScreen'
 
-function NotificationScreen() {
-    BaseScreen.call(this, 'Notification screen', by.text('Notifications'))
+class NotificationScreen extends BaseScreen {
+
+    constructor() {
+        super('Notification screen', by.text('Notifications'))
+    }
 }
-
-NotificationScreen.prototype = Object.create(BaseScreen.prototype);
-NotificationScreen.prototype.constructor = NotificationScreen;
 
 export default NotificationScreen;

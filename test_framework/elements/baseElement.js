@@ -1,5 +1,5 @@
-import logger from './../utils/logger'
-import configuration from './../config.json'
+import logger from '@/utils/logger'
+import configuration from '@/config.json'
 const ELEMENT_TIMEOUT = configuration.elementTimeout
 
 class BaseElement {

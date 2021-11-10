@@ -1,4 +1,4 @@
-import NotificationScreen from './../screens/notificationScreen'
+import NotificationScreen from '@/screens/notificationScreen'
 
 const notificationScreen = new NotificationScreen()
 

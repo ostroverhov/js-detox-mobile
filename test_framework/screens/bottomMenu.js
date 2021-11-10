@@ -1,26 +1,26 @@
-import logger from '../utils/logger'
-import BaseScreen from './baseScreen'
-import Button from '../elements/button'
+import logger from '@/utils/logger'
+import BaseScreen from '@/screens/baseScreen'
+import Button from '@/elements/button'
 
 const elements = {
     menuItemButton: (menuItem) => new Button(`${menuItem}`, by.id(`${menuItem}`)),
 };
 
-function BottomMenu() {
-    BaseScreen.call(this, 'Bottom menu', by.id('Bottom tab menu'))
-}
+class BottomMenu extends BaseScreen {
 
-BottomMenu.prototype = Object.create(BaseScreen.prototype);
-BottomMenu.prototype.constructor = BottomMenu;
+    constructor() {
+        super('Start screen', by.text('Find best food in your locality!'))
+    }
 
-BottomMenu.prototype.tapBottomMenuButton = async function(menuItem) {
-    logger.info(`Tap bottm menu item ${menuItem}`)
-    await elements.menuItemButton(menuItem).tapElement(0);
-}
-
-BottomMenu.prototype.checkBottomMenuButtonVisibility = async function(menuItem) {
-    logger.info(`Is present bottom menu item ${menuItem}`)
-    await elements.menuItemButton(menuItem).checkElementVisiblility(0);
+    async tapBottomMenuButton(menuItem) {
+        logger.info(`Tap bottm menu item ${menuItem}`)
+        await elements.menuItemButton(menuItem).tapElement(0);
+    }
+    
+    async checkBottomMenuButtonVisibility(menuItem) {
+        logger.info(`Is present bottom menu item ${menuItem}`)
+        await elements.menuItemButton(menuItem).checkElementVisiblility(0);
+    }
 }
 
 export default BottomMenu;

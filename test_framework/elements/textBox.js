@@ -1,10 +1,10 @@
-import BaseElement from './baseElement'
+import BaseElement from '@/elements/baseElement'
 
-function TextBox(name, by) {
-    BaseElement.call(this, `TextBox ${name}`, by)
+class TextBox extends BaseElement {
+
+    constructor(name, by) {
+        super(`TextBox ${name}`, by)
+    }
 }
-
-TextBox.prototype = Object.create(BaseElement.prototype);
-TextBox.prototype.constructor = TextBox;
 
 export default TextBox;

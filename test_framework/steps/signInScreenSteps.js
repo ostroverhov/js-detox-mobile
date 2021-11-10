@@ -1,4 +1,4 @@
-import SignInScreen from './../screens/signInScreen'
+import SignInScreen from '@/screens/signInScreen'
 
 const signInScreen = new SignInScreen()
 

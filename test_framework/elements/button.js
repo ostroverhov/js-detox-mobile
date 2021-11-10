@@ -1,10 +1,10 @@
-import BaseElement from './baseElement'
+import BaseElement from '@/elements/baseElement'
 
-function Button(name, by) {
-    BaseElement.call(this, `Button ${name}`, by)
+class Button extends BaseElement {
+
+    constructor(name, by) {
+        super(`Button ${name}`, by)
+    }
 }
-
-Button.prototype = Object.create(BaseElement.prototype);
-Button.prototype.constructor = Button;
 
 export default Button;

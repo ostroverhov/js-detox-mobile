@@ -1,7 +1,7 @@
-import startScreenSteps from '../test_framework/steps/startScreenSteps'
-import signInScreenSteps from '../test_framework/steps/signInScreenSteps'
-import mainScreenSteps from '../test_framework/steps/mainScreenSteps'
-import testData from './../test_framework/testData.json'
+import startScreenSteps from '@/steps/startScreenSteps'
+import signInScreenSteps from '@/steps/signInScreenSteps'
+import mainScreenSteps from '@/steps/mainScreenSteps'
+import testData from '@/testData.json'
 const REGISTERED_USER = testData.registeredUser
 const UNREGISTERED_USER = testData.unregisteredUser
 

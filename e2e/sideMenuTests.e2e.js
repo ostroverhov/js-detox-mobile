@@ -1,8 +1,8 @@
-import startScreenSteps from '../test_framework/steps/startScreenSteps'
-import signInScreenSteps from '../test_framework/steps/signInScreenSteps'
-import mainScreenSteps from '../test_framework/steps/mainScreenSteps'
-import sideMenuSteps from './../test_framework/steps/sideMenuSteps'
-import testData from './../test_framework/testData.json'
+import startScreenSteps from '@/steps/startScreenSteps'
+import signInScreenSteps from '@/steps/signInScreenSteps'
+import mainScreenSteps from '@/steps/mainScreenSteps'
+import sideMenuSteps from '@/steps/sideMenuSteps'
+import testData from '@/testData.json'
 const REGISTERED_USER = testData.registeredUser
 const SIDE_MENU_ITEMS = {
   Home: 'Home',

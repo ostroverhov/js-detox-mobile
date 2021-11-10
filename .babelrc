@@ -1,0 +1,8 @@
+{
+  "plugins": [
+    ["babel-plugin-root-import", {
+      "rootPathSuffix": "D:/js-mobile-detox/js-detox-mobile/test_framework",
+      "rootPathPrefix": "@"
+    }]
+  ]
+}

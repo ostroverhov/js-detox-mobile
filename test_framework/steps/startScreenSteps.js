@@ -1,4 +1,4 @@
-import StartScreen from './../screens/startScreen'
+import StartScreen from '@/screens/startScreen'
 
 const startScreen = new StartScreen()
 

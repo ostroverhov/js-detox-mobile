@@ -25,6 +25,13 @@ export function DrawerContent(props) {
     const paperTheme = useTheme();
 
     const { signOut, toggleTheme } = React.useContext(AuthContext);
+    const menuItems = {
+        Home: 'Home',
+        Profile: 'Profile',
+        Bookmarks: 'Bookmarks',
+        Settings: 'Settings',
+        Support: 'Support'
+    }
 
     return(
         <View style={{flex:1}}>
@@ -59,7 +66,7 @@ export function DrawerContent(props) {
 
                     <Drawer.Section style={styles.drawerSection}>
                         <DrawerItem 
-                            testID="Home"
+                            testID={menuItems.Home}
                             icon={({color, size}) => (
                                 <Icon 
                                 name="home-outline" 
@@ -67,11 +74,11 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="Home"
+                            label={menuItems.Home}
                             onPress={() => {props.navigation.navigate('Home')}}
                         />
                         <DrawerItem 
-                            testID="Profile"
+                            testID={menuItems.Profile}
                             icon={({color, size}) => (
                                 <Icon 
                                 name="account-outline" 
@@ -79,11 +86,11 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="Profile"
+                            label={menuItems.Profile}
                             onPress={() => {props.navigation.navigate('Profile')}}
                         />
                         <DrawerItem 
-                            testID="Bookmarks"
+                            testID={menuItems.Bookmarks}
                             icon={({color, size}) => (
                                 <Icon 
                                 name="bookmark-outline" 
@@ -91,11 +98,11 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="Bookmarks"
+                            label={menuItems.Bookmarks}
                             onPress={() => {props.navigation.navigate('BookmarkScreen')}}
                         />
                         <DrawerItem 
-                            testID="Settings"
+                            testID={menuItems.Settings}
                             icon={({color, size}) => (
                                 <Icon 
                                 name="settings-outline" 
@@ -103,11 +110,11 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="Settings"
+                            label={menuItems.Settings}
                             onPress={() => {props.navigation.navigate('SettingScreen')}}
                         />
                         <DrawerItem 
-                            testID="Support"
+                            testID={menuItems.Support}
                             icon={({color, size}) => (
                                 <Icon 
                                 name="account-check-outline" 
@@ -115,7 +122,7 @@ export function DrawerContent(props) {
                                 size={size}
                                 />
                             )}
-                            label="Support"
+                            label={menuItems.Support}
                             onPress={() => {props.navigation.navigate('SupportScreen')}}
                         />
                     </Drawer.Section>

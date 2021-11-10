@@ -31,6 +31,11 @@ const SignInScreen = ({navigation}) => {
         isValidPassword: true,
     });
 
+    const textInputs = {
+        yourUsername: 'Your Username',
+        yourPassword: 'Your Password'
+    } 
+
     const { colors } = useTheme();
 
     const { signIn } = React.useContext(AuthContext);
@@ -134,8 +139,8 @@ const SignInScreen = ({navigation}) => {
                     size={20}
                 />
                 <TextInput 
-                    testID="Your Username"
-                    placeholder="Your Username"
+                    testID={textInputs.yourUsername}
+                    placeholder={textInputs.yourUsername}
                     placeholderTextColor="#666666"
                     style={[styles.textInput, {
                         color: colors.text
@@ -174,8 +179,8 @@ const SignInScreen = ({navigation}) => {
                     size={20}
                 />
                 <TextInput 
-                    testID="Your Password"
-                    placeholder="Your Password"
+                    testID={textInputs.yourPassword}
+                    placeholder={textInputs.yourPassword}
                     placeholderTextColor="#666666"
                     secureTextEntry={data.secureTextEntry ? true : false}
                     style={[styles.textInput, {
